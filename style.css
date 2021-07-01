@@ -14,6 +14,8 @@ body {
 
 /*-----title--page-----*/
 
+/*---header---*/
+
 .title-page {
     background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('./images/gym-background.jpg');
     background-repeat: no-repeat;
@@ -44,6 +46,10 @@ body {
     font-size: 1.5rem;
     letter-spacing: 0.25rem;
 }
+.title-page ul a:hover{
+    border-bottom: 1px solid white;
+    padding-bottom: 1rem;
+}
 .title-page ul li:nth-child(1) {
     font-size: 2.5rem;
     margin-right: 6rem;
@@ -65,7 +71,109 @@ body {
     letter-spacing: 0.25rem;
     cursor: pointer;
 }
+.title-page .nav-bar button:hover {
+    background-color: rgb(241, 99, 146);
+    color: black;
+}
 
+/*---middle-text---*/
+
+.title-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+.title-text h1 {
+    font-weight: bold;
+    font-size: 5rem;
+}
+.title-text p {
+    font-size: 1.75rem;
+    line-height: 3rem;
+    margin-bottom: 3rem;
+}
+.title-text .title-btn {
+    color: white;
+    background-color: transparent;
+    border: 1px solid white;
+    margin: 2rem 1.5rem;
+    padding: 1.5rem 2.5rem;
+    cursor: pointer;
+}
+.title-text .title-btn:hover {
+    color: black;
+    font-weight: bold;
+    background-color: white;
+}
+
+
+/*-----feature--images-----*/
+
+.feature-class {
+    height: 100vh;
+}
+.feature-class .feature-head {
+    text-align: center;
+    font-size: 3rem;
+    font-weight: bold;
+    height: 20%;
+    margin-top: 10rem;
+    position: relative;
+}
+.feature-class .feature-head::before {
+    content: " ";
+    position: absolute;
+    top: -2rem;
+    left: 46%;
+    width: 10%;
+    height: 0.15rem;
+    background-color: rgb(250, 68, 129);
+}
+.feature-class .featured-gallery {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    flex-wrap: wrap;
+}
+.feature-class .featured-gallery_1 {
+    width: 33%;
+    min-width: 30rem;
+    /* height: 60rem; */
+    position: relative;
+}
+.feature-class .feature-img{
+    height: 50rem;
+    width: 100%;
+    position: relative;
+}
+.feature-class .feature-img img {
+    width: 100%;
+    height: 100%;
+}
+.featured-gallery .featured-info {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+}
+.featured-gallery .featured-info h1 {
+    font-size: 2.3rem;
+    font-weight: bold;
+    margin-top: 4rem;
+}
+.featured-gallery .featured-info span {
+    border-radius: 50%;
+    background-color: rgb(245, 10, 61);
+    padding: 3rem 2rem;
+    margin-bottom: 4rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
 
 
 /*-----media-query-----*/
@@ -81,5 +189,46 @@ body {
 @media screen and (max-width: 812px) {
     .title-page ul li {
         margin-top: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .title-text h1 {
+        font-size: 3rem;
+        margin-bottom: 1.5rem;
+    }
+    .title-text p {
+        font-size: 1.25rem;
+        line-height: 2rem;
+        margin-bottom: 1rem;
+    }
+    .title-page .container {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .title-text {
+        position: absolute;
+        top: 60%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+    .title-text h1 {
+        font-size: 2.5rem;
+        margin: 2.5rem 0;
+    }
+    .title-text p {
+        font-size: 1rem;
+        line-height: 1.25rem;
+    }
+    .title-text .title-btn {
+        color: white;
+        background-color: transparent;
+        border: 1px solid white;
+        margin: 1rem 0.5rem;
+        padding: 0.75rem 1.25rem;
+        cursor: pointer;
     }
 }
