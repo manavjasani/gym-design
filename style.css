@@ -12,6 +12,11 @@ body {
     font-family: 'Open Sans', sans-serif;
 }
 
+.container {
+    width: 60%;
+    margin: auto;
+}
+
 /*-----title--page-----*/
 
 /*---header---*/
@@ -20,12 +25,8 @@ body {
     background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('./images/gym-background.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-    height: 100vh;
+    min-height: 100vh;
     color: white;
-}
-.title-page .container {
-    width: 60%;
-    margin: auto;
 }
 .title-page .nav-bar {
     display: flex;
@@ -112,13 +113,12 @@ body {
 /*-----feature--images-----*/
 
 .feature-class {
-    height: 100vh;
+    min-height: 100vh;
 }
 .feature-class .feature-head {
     text-align: center;
     font-size: 3rem;
     font-weight: bold;
-    height: 20%;
     margin-top: 10rem;
     position: relative;
 }
@@ -131,7 +131,14 @@ body {
     height: 0.15rem;
     background-color: rgb(250, 68, 129);
 }
+.feature-class .feature-blur_text {
+    font-size: 12rem;
+    text-align: center;
+    opacity: 0.1;
+    letter-spacing: 1rem;
+}
 .feature-class .featured-gallery {
+    margin-top: -10rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -141,7 +148,6 @@ body {
 .feature-class .featured-gallery_1 {
     width: 33%;
     min-width: 30rem;
-    /* height: 60rem; */
     position: relative;
 }
 .feature-class .feature-img{
@@ -176,6 +182,83 @@ body {
 }
 
 
+/*-----schedule-----*/
+
+.schedule {
+    min-height: 100vh;
+}
+.schedule .schedule-title {
+    text-align: center;
+    font-size: 3rem;
+    font-weight: bold;
+    margin-top: 10rem;
+    position: relative;
+}
+.schedule .schedule-title::before {
+    content: " ";
+    position: absolute;
+    top: -2rem;
+    left: 46%;
+    width: 10%;
+    height: 0.15rem;
+    background-color: rgb(250, 68, 129);
+}
+.schedule .schedule-blur_title {
+    font-size: 12rem;
+    text-align: center;
+    opacity: 0.1;
+    letter-spacing: 1rem;    
+}
+.schedule .schedule-info {
+    background: linear-gradient(315deg, rgba(189, 187, 187), rgba(243, 216, 216));
+    display: flex;
+    flex-direction: column;
+    margin-top: -7rem;
+}
+.schedule-info .schedule-info_1 {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.schedule-info .schedule-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 50%;
+    padding: 2rem;
+}
+.schedule-info .schedule-img {
+    width: 50%;
+    height: 40rem;
+}
+.schedule-info .schedule-img img {
+    width: 100%;
+    height: 100%;
+}
+.schedule-info .schedule-text h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+.schedule-info .schedule-text p {
+    font-size: 1.5rem;
+}
+.schedule-info .schedule-text .schedule-span {
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+}
+.schedule-span i {
+    margin-right: 1rem;
+}
+.schedule .schedule-btn {
+    color: white;
+    background-color: rgb(250, 68, 129);
+    padding: 1rem 1.5rem;
+    font-size: 1.5rem;
+    border: none;
+    cursor: pointer;
+}
+
 /*-----media-query-----*/
 
 @media screen and (max-width: 1460px) {
@@ -185,9 +268,39 @@ body {
     }
 }
 
+@media screen and (max-width: 1190px) {
+    .feature-class .feature-blur_text {
+        font-size: 8rem;
+        text-align: center;
+        opacity: 0.1;
+    }
+    .schedule .schedule-blur_title {
+        font-size: 8rem;
+        text-align: center;
+        opacity: 0.1;  
+    }
+    .feature-class .featured-gallery {
+        margin-top: -5rem;
+    }
+    .schedule .schedule-info {
+        margin-top: -3rem;
+    }
+} 
 
 @media screen and (max-width: 812px) {
     .title-page ul li {
+        margin-top: 1.5rem;
+    }
+    .feature-class .feature-blur_text {
+        display: none;
+    }
+    .schedule .schedule-blur_title {
+        display: none;  
+    }
+    .feature-class .featured-gallery {
+        margin-top: 1.5rem;
+    }
+    .schedule .schedule-info {
         margin-top: 1.5rem;
     }
 }
@@ -202,7 +315,7 @@ body {
         line-height: 2rem;
         margin-bottom: 1rem;
     }
-    .title-page .container {
+    .container {
         width: 100%;
     }
 }
