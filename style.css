@@ -1,0 +1,85 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+/*-----title--page-----*/
+
+.title-page {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('./images/gym-background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    color: white;
+}
+.title-page .container {
+    width: 60%;
+    margin: auto;
+}
+.title-page .nav-bar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 4rem;
+}
+.title-page ul {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+.title-page ul li {
+    margin-right: 3rem;
+    font-size: 1.5rem;
+    letter-spacing: 0.25rem;
+}
+.title-page ul li:nth-child(1) {
+    font-size: 2.5rem;
+    margin-right: 6rem;
+    letter-spacing: 0.5rem;
+}
+.title-page ul li i {
+    vertical-align: text-top;
+}
+.title-page ul li a {
+    text-decoration: none;
+    color: white;
+}
+.title-page .nav-bar button {
+    color: white;
+    background-color: rgb(250, 68, 129);
+    padding: 1rem 1.5rem;
+    font-size: 1.25rem;
+    border: none;
+    letter-spacing: 0.25rem;
+    cursor: pointer;
+}
+
+
+
+/*-----media-query-----*/
+
+@media screen and (max-width: 1460px) {
+    .title-page .nav-bar button {
+        display: block;
+        margin: 1.5rem auto;
+    }
+}
+
+
+@media screen and (max-width: 812px) {
+    .title-page ul li {
+        margin-top: 1.5rem;
+    }
+}
