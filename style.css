@@ -259,6 +259,79 @@ body {
     cursor: pointer;
 }
 
+
+/*-----footer-----*/
+
+.footer {
+    margin-top: 5rem;
+    min-height: 50vh;
+    background: linear-gradient(315deg, rgb(31, 30, 30), rgb(56, 52, 52));
+    position: relative;
+}
+.footer .container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 3rem;
+    flex-wrap: wrap;
+}
+.footer .cont-info {
+    margin-top: 4rem;
+    width: 33%;
+    min-width: 25%;
+}
+.footer .about-us p {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    color: rgb(158, 147, 147);
+    margin-bottom: 2rem;
+}
+.footer .social-icon i {
+    margin-right: 1rem;
+    padding: 1rem;
+    border-radius: 50%;
+    border: 1px solid grey;
+    color: rgb(250, 68, 129);
+    font-size: 1.5rem;
+}
+.footer .container h1 {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+}
+.container .contact-info h3{
+    color: rgb(158, 147, 147);
+    font-size: 1.75rem;
+}
+.container .contact-info p {
+    color: white;
+    font-size: 1.75rem;
+    margin-bottom: 1.25rem;
+}
+.footer .links {
+    display: flex;
+    flex-direction: column;
+}
+.footer .links a {
+    text-decoration: none;
+    color: rgb(250, 68, 129);
+    font-size: 1.75rem;
+    margin: 1rem 0;
+}
+.footer .copy {
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    color: rgb(158, 147, 147);
+    font-size: 1.5rem;
+}
+
+
+
+
+
 /*-----media-query-----*/
 
 @media screen and (max-width: 1460px) {
@@ -317,6 +390,9 @@ body {
     }
     .container {
         width: 100%;
+    }
+    .footer .copy {
+        display: none;
     }
 }
 
