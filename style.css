@@ -13,7 +13,7 @@ body {
 }
 
 .container {
-    width: 60%;
+    width: 75%;
     margin: auto;
 }
 
@@ -266,7 +266,6 @@ body {
     margin-top: 5rem;
     min-height: 50vh;
     background: linear-gradient(315deg, rgb(31, 30, 30), rgb(56, 52, 52));
-    position: relative;
 }
 .footer .container {
     display: flex;
@@ -319,13 +318,10 @@ body {
     margin: 1rem 0;
 }
 .footer .copy {
-    position: absolute;
-    bottom: 5%;
-    left: 50%;
-    transform: translateX(-50%);
     text-align: center;
     color: rgb(158, 147, 147);
     font-size: 1.5rem;
+    margin-top: 1.5rem;
 }
 
 
@@ -343,14 +339,10 @@ body {
 
 @media screen and (max-width: 1190px) {
     .feature-class .feature-blur_text {
-        font-size: 8rem;
-        text-align: center;
-        opacity: 0.1;
+        font-size: 6rem;
     }
     .schedule .schedule-blur_title {
         font-size: 8rem;
-        text-align: center;
-        opacity: 0.1;  
     }
     .feature-class .featured-gallery {
         margin-top: -5rem;
@@ -358,11 +350,23 @@ body {
     .schedule .schedule-info {
         margin-top: -3rem;
     }
+    .title-text {
+        top: 60%;
+    }
 } 
+@media screen and (max-width: 1005px) {
+    .feature-class .featured-gallery_1 {
+        width: 50%;
+        min-width: 20rem;
+    }
+}
 
-@media screen and (max-width: 812px) {
-    .title-page ul li {
-        margin-top: 1.5rem;
+@media screen and (max-width: 835px) {
+    .container {
+        width: 100%;
+    }
+    .title-text h1 {
+        font-size: 3rem;
     }
     .feature-class .feature-blur_text {
         display: none;
@@ -376,48 +380,105 @@ body {
     .schedule .schedule-info {
         margin-top: 1.5rem;
     }
+    .feature-class .featured-gallery_1 {
+        width: 33%;
+        min-width: 20rem;
+    }
+    .feature-class .feature-img{
+        height: 35rem;
+    }
+    .schedule .schedule-title {
+        margin-top: 1rem;
+    }
 }
 
-@media screen and (max-width: 650px) {
-    .title-text h1 {
-        font-size: 3rem;
-        margin-bottom: 1.5rem;
+@media screen and (max-width: 600px) {
+    .title-text .title-btn {
+        margin: 1rem 1rem;
+        padding: 0.3rem 1rem;
+    }
+    .feature-class .featured-gallery_1 {
+        width: 50%;
+    }
+    .schedule .schedule-title {
+        margin-top: 2.5rem;
+    }
+}
+@media screen and (max-width: 520px) {
+    .title-page .nav-bar {
+        padding-top: 1rem;
+    }
+    .title-text {
+        width: 100%;
+    }
+    .footer .cont-info {
+        margin-top: 2rem;
+        width: 50%;
+    }
+}
+@media screen and (max-width: 405px) {
+    .feature-class .featured-gallery_1 {
+        width: 100%;
+    }
+    .schedule-info .schedule-info_1 {
+       flex-direction: column;
+    }
+    .schedule-info .schedule-text {
+        width: 100%;
+        padding: 2rem;
+    }
+    .schedule-info .schedule-img {
+        width: 100%;
+    }
+}
+@media screen and (max-width: 375px) {
+    .footer .cont-info {
+        width: 100%;
     }
     .title-text p {
         font-size: 1.25rem;
-        line-height: 2rem;
-        margin-bottom: 1rem;
-    }
-    .container {
-        width: 100%;
-    }
-    .footer .copy {
-        display: none;
+        line-height: 1.5rem;
+        margin-bottom: 1.25rem;
     }
 }
-
-@media screen and (max-width: 350px) {
+@media screen and (max-width: 275px) {
     .title-text {
-        position: absolute;
-        top: 60%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        text-align: center;
-    }
-    .title-text h1 {
-        font-size: 2.5rem;
-        margin: 2.5rem 0;
-    }
-    .title-text p {
-        font-size: 1rem;
-        line-height: 1.25rem;
+        top: 65%;
     }
     .title-text .title-btn {
-        color: white;
-        background-color: transparent;
-        border: 1px solid white;
-        margin: 1rem 0.5rem;
-        padding: 0.75rem 1.25rem;
-        cursor: pointer;
+        margin: 0.25rem 0.5rem;
+        padding: 0.2rem 0.5rem;
+    }
+}
+@media screen and (max-height: 405px) {
+    .title-text {
+        top: 65%;
+        width: 100%;
+    }
+    .title-text .title-btn {
+        margin: 0 0.5rem;
+        padding: 0.2rem 0.5rem;
+    }
+    .title-text h1 {
+        font-size: 3rem;
+    }
+    .title-page .nav-bar {
+        padding-top: 1rem;
+    }
+}
+@media screen and (max-height: 335px)  {
+    .title-text p {
+        font-size: 1.25rem;
+        line-height: 1.5rem;
+        margin-bottom: 1rem;
+    }
+    .title-page .nav-bar button {
+        padding: 0.3rem 0.75rem;
+        font-size: 1rem;
+    }
+    .title-page ul li {
+        margin-right: 1.5rem;
+        font-size: 1rem;
+        letter-spacing: 0.15rem;
     }
 }
